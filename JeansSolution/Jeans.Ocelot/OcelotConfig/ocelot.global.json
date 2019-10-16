@@ -1,0 +1,9 @@
+﻿{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://10.227.150.158",
+    "RateLimitOptions": {
+      "QuotaExceededMessage": "Customize Tips!",
+      "ClientIdHeader": "wilmar"
+    }
+  }
+}

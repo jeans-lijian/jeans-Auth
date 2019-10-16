@@ -1,0 +1,9 @@
+E:\My_Source_Code\NetCore_AdminTLE\JeansSolution\Jeans.Http\bin\Debug\netstandard2.0\Jeans.Http.deps.json
+E:\My_Source_Code\NetCore_AdminTLE\JeansSolution\Jeans.Http\bin\Debug\netstandard2.0\Jeans.Http.dll
+E:\My_Source_Code\NetCore_AdminTLE\JeansSolution\Jeans.Http\bin\Debug\netstandard2.0\Jeans.Http.pdb
+E:\My_Source_Code\NetCore_AdminTLE\JeansSolution\Jeans.Http\obj\Debug\netstandard2.0\Jeans.Http.csprojAssemblyReference.cache
+E:\My_Source_Code\NetCore_AdminTLE\JeansSolution\Jeans.Http\obj\Debug\netstandard2.0\Jeans.Http.csproj.CoreCompileInputs.cache
+E:\My_Source_Code\NetCore_AdminTLE\JeansSolution\Jeans.Http\obj\Debug\netstandard2.0\Jeans.Http.AssemblyInfoInputs.cache
+E:\My_Source_Code\NetCore_AdminTLE\JeansSolution\Jeans.Http\obj\Debug\netstandard2.0\Jeans.Http.AssemblyInfo.cs
+E:\My_Source_Code\NetCore_AdminTLE\JeansSolution\Jeans.Http\obj\Debug\netstandard2.0\Jeans.Http.dll
+E:\My_Source_Code\NetCore_AdminTLE\JeansSolution\Jeans.Http\obj\Debug\netstandard2.0\Jeans.Http.pdb

@@ -1,0 +1,12 @@
+E:\My_Source_Code\NetCore_AdminTLE\JeansSolution\Jeans.User.Core\bin\Debug\Jeans.User.Core.dll
+E:\My_Source_Code\NetCore_AdminTLE\JeansSolution\Jeans.User.Core\bin\Debug\Jeans.User.Core.pdb
+E:\My_Source_Code\NetCore_AdminTLE\JeansSolution\Jeans.User.Core\obj\Debug\Jeans.User.Core.csprojAssemblyReference.cache
+E:\My_Source_Code\NetCore_AdminTLE\JeansSolution\Jeans.User.Core\obj\Debug\Jeans.User.Core.csproj.CoreCompileInputs.cache
+E:\My_Source_Code\NetCore_AdminTLE\JeansSolution\Jeans.User.Core\obj\Debug\Jeans.User.Core.dll
+E:\My_Source_Code\NetCore_AdminTLE\JeansSolution\Jeans.User.Core\obj\Debug\Jeans.User.Core.pdb
+E:\My_Source_Code\NetCore_ShopOrder\JeansSolution\Jeans.User.Core\bin\Debug\Jeans.User.Core.dll
+E:\My_Source_Code\NetCore_ShopOrder\JeansSolution\Jeans.User.Core\bin\Debug\Jeans.User.Core.pdb
+E:\My_Source_Code\NetCore_ShopOrder\JeansSolution\Jeans.User.Core\obj\Debug\Jeans.User.Core.csprojAssemblyReference.cache
+E:\My_Source_Code\NetCore_ShopOrder\JeansSolution\Jeans.User.Core\obj\Debug\Jeans.User.Core.csproj.CoreCompileInputs.cache
+E:\My_Source_Code\NetCore_ShopOrder\JeansSolution\Jeans.User.Core\obj\Debug\Jeans.User.Core.dll
+E:\My_Source_Code\NetCore_ShopOrder\JeansSolution\Jeans.User.Core\obj\Debug\Jeans.User.Core.pdb

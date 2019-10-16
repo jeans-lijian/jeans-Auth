@@ -12670,11 +12670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\My_Source_Code\\NetCore_ShopOrder\\JeansSolution\\Jeans.WebCore\\Jeans.WebCore.csproj",
+      "projectUniqueName": "E:\\My_Source_Code\\ShopOrder\\JeansSolution\\Jeans.WebCore\\Jeans.WebCore.csproj",
       "projectName": "Jeans.WebCore",
-      "projectPath": "E:\\My_Source_Code\\NetCore_ShopOrder\\JeansSolution\\Jeans.WebCore\\Jeans.WebCore.csproj",
+      "projectPath": "E:\\My_Source_Code\\ShopOrder\\JeansSolution\\Jeans.WebCore\\Jeans.WebCore.csproj",
       "packagesPath": "C:\\Users\\lijian15\\.nuget\\packages\\",
-      "outputPath": "E:\\My_Source_Code\\NetCore_ShopOrder\\JeansSolution\\Jeans.WebCore\\obj\\",
+      "outputPath": "E:\\My_Source_Code\\ShopOrder\\JeansSolution\\Jeans.WebCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

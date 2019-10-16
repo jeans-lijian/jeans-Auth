@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Jeans.Services")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Jeans.WebCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("Jeans.Services")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Jeans.Services")]
+[assembly: System.Reflection.AssemblyProductAttribute("Jeans.WebCore")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Jeans.WebCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。

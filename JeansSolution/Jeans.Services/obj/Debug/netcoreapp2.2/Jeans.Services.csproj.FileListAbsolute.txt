@@ -1,8 +1,0 @@
-E:\My_Source_Code\ShopOrder\JeansSolution\Jeans.Services\bin\Debug\netcoreapp2.2\Jeans.Services.deps.json
-E:\My_Source_Code\ShopOrder\JeansSolution\Jeans.Services\bin\Debug\netcoreapp2.2\Jeans.Services.dll
-E:\My_Source_Code\ShopOrder\JeansSolution\Jeans.Services\bin\Debug\netcoreapp2.2\Jeans.Services.pdb
-E:\My_Source_Code\ShopOrder\JeansSolution\Jeans.Services\obj\Debug\netcoreapp2.2\Jeans.Services.csproj.CoreCompileInputs.cache
-E:\My_Source_Code\ShopOrder\JeansSolution\Jeans.Services\obj\Debug\netcoreapp2.2\Jeans.Services.AssemblyInfoInputs.cache
-E:\My_Source_Code\ShopOrder\JeansSolution\Jeans.Services\obj\Debug\netcoreapp2.2\Jeans.Services.AssemblyInfo.cs
-E:\My_Source_Code\ShopOrder\JeansSolution\Jeans.Services\obj\Debug\netcoreapp2.2\Jeans.Services.dll
-E:\My_Source_Code\ShopOrder\JeansSolution\Jeans.Services\obj\Debug\netcoreapp2.2\Jeans.Services.pdb

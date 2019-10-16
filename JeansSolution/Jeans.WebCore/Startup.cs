@@ -1,13 +1,13 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using Jeans.Data;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Globalization;
 
 namespace Jeans.WebCore
 {
@@ -37,9 +37,14 @@ namespace Jeans.WebCore
                 o.ExpireTimeSpan = TimeSpan.FromMinutes(30);
             });
 
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            services.AddDbContext<ShopOrderContext>(options => options.UseMySQL(Configuration.GetConnectionString("MySql")));
+
+            //services.AddLocalization(options => options.ResourcesPath = "Resources");
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddSingleton<IDbContext, ShopOrderContext>();
+            services.AddTransient(typeof(IRepository<>), typeof(MySqlRepository<>));
 
             //services.AddTransient<IHttpClient, StandardHttpClient>();
             //services.AddTransient<IUserService, UserService>();
@@ -63,17 +68,17 @@ namespace Jeans.WebCore
             app.UseCookiePolicy();
             app.UseAuthentication();
 
-            var supportedCultures = new[] {
-                new CultureInfo("en-US"),
-                new CultureInfo("zh-CN")
-            };
+            //var supportedCultures = new[] {
+            //    new CultureInfo("en-US"),
+            //    new CultureInfo("zh-CN")
+            //};
 
-            app.UseRequestLocalization(new RequestLocalizationOptions
-            {
-                DefaultRequestCulture = new RequestCulture("en-US"),
-                SupportedCultures = supportedCultures,
-                SupportedUICultures = supportedCultures
-            });
+            //app.UseRequestLocalization(new RequestLocalizationOptions
+            //{
+            //    DefaultRequestCulture = new RequestCulture("en-US"),
+            //    SupportedCultures = supportedCultures,
+            //    SupportedUICultures = supportedCultures
+            //});
 
             app.UseMvc(routes =>
             {

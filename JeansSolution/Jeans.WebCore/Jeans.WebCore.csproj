@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Jeans.Data\Jeans.Data.csproj" />
+    <ProjectReference Include="..\Jeans.Services\Jeans.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

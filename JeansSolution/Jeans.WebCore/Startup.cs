@@ -1,4 +1,5 @@
 ﻿using Jeans.Data;
+using Jeans.Services.Systems;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -45,6 +46,8 @@ namespace Jeans.WebCore
 
             services.AddSingleton<IDbContext, ShopOrderContext>();
             services.AddTransient(typeof(IRepository<>), typeof(MySqlRepository<>));
+
+            services.AddTransient<IUserService, UserService>();
 
             //services.AddTransient<IHttpClient, StandardHttpClient>();
             //services.AddTransient<IUserService, UserService>();

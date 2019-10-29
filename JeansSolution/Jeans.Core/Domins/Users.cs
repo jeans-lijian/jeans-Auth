@@ -14,14 +14,10 @@ namespace Jeans.Core.Domains
         /// </summary>
         public string Name { get; set; }
 
-        /// <summary>
-        /// QQ
-        /// </summary>
         public string QQ { get; set; }
 
-        /// <summary>
-        /// 密码
-        /// </summary>
+        public string Email { get; set; }
+
         public string Password { get; set; }
     }
 }

@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Data\\Jeans.Data.csproj": {}
+  },
+  "projects": {
+    "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Core\\Jeans.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Core\\Jeans.Core.csproj",
+        "projectName": "Jeans.Core",
+        "projectPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Core\\Jeans.Core.csproj",
+        "packagesPath": "C:\\Users\\lijian15\\.nuget\\packages\\",
+        "outputPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lijian15\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://10.115.148.103:8081/repository/nuget-hosted/": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Data\\Jeans.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Data\\Jeans.Data.csproj",
+        "projectName": "Jeans.Data",
+        "projectPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Data\\Jeans.Data.csproj",
+        "packagesPath": "C:\\Users\\lijian15\\.nuget\\packages\\",
+        "outputPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lijian15\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://10.115.148.103:8081/repository/nuget-hosted/": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
+            "projectReferences": {
+              "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Core\\Jeans.Core.csproj": {
+                "projectPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Core\\Jeans.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

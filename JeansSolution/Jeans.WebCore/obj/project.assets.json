@@ -5034,6 +5034,16 @@
         "runtime": {
           "bin/placeholder/Jeans.Data.dll": {}
         }
+      },
+      "Jeans.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/Jeans.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Jeans.Services.dll": {}
+        }
       }
     }
   },
@@ -13689,6 +13699,11 @@
       "type": "project",
       "path": "../Jeans.Data/Jeans.Data.csproj",
       "msbuildProject": "../Jeans.Data/Jeans.Data.csproj"
+    },
+    "Jeans.Services/1.0.0": {
+      "type": "project",
+      "path": "../Jeans.Services/Jeans.Services.csproj",
+      "msbuildProject": "../Jeans.Services/Jeans.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -13696,6 +13711,7 @@
       "BuildBundlerMinifier >= 2.8.391",
       "BundlerMinifier.Core >= 2.8.391",
       "Jeans.Data >= 1.0.0",
+      "Jeans.Services >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1",
@@ -13709,11 +13725,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\My_Source_Code\\ShopOrder\\JeansSolution\\Jeans.WebCore\\Jeans.WebCore.csproj",
+      "projectUniqueName": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.WebCore\\Jeans.WebCore.csproj",
       "projectName": "Jeans.WebCore",
-      "projectPath": "E:\\My_Source_Code\\ShopOrder\\JeansSolution\\Jeans.WebCore\\Jeans.WebCore.csproj",
+      "projectPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.WebCore\\Jeans.WebCore.csproj",
       "packagesPath": "C:\\Users\\lijian15\\.nuget\\packages\\",
-      "outputPath": "E:\\My_Source_Code\\ShopOrder\\JeansSolution\\Jeans.WebCore\\obj\\",
+      "outputPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.WebCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13727,14 +13743,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/wilmar-intl/_packaging/KDSXNuget/nuget/v3/index.json": {}
+        "http://10.115.148.103:8081/repository/nuget-hosted/": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
           "projectReferences": {
-            "E:\\My_Source_Code\\ShopOrder\\JeansSolution\\Jeans.Data\\Jeans.Data.csproj": {
-              "projectPath": "E:\\My_Source_Code\\ShopOrder\\JeansSolution\\Jeans.Data\\Jeans.Data.csproj"
+            "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Data\\Jeans.Data.csproj": {
+              "projectPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Data\\Jeans.Data.csproj"
+            },
+            "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Services\\Jeans.Services.csproj": {
+              "projectPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Services\\Jeans.Services.csproj"
             }
           }
         }
@@ -13747,6 +13767,7 @@
     },
     "frameworks": {
       "netcoreapp2.2": {
+        "targetAlias": "netcoreapp2.2",
         "dependencies": {
           "BuildBundlerMinifier": {
             "target": "Package",
@@ -13778,10 +13799,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

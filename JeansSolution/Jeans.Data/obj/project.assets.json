@@ -5559,11 +5559,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\My_Source_Code\\ShopOrder\\JeansSolution\\Jeans.Data\\Jeans.Data.csproj",
+      "projectUniqueName": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Data\\Jeans.Data.csproj",
       "projectName": "Jeans.Data",
-      "projectPath": "E:\\My_Source_Code\\ShopOrder\\JeansSolution\\Jeans.Data\\Jeans.Data.csproj",
+      "projectPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Data\\Jeans.Data.csproj",
       "packagesPath": "C:\\Users\\lijian15\\.nuget\\packages\\",
-      "outputPath": "E:\\My_Source_Code\\ShopOrder\\JeansSolution\\Jeans.Data\\obj\\",
+      "outputPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5577,14 +5577,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/wilmar-intl/_packaging/KDSXNuget/nuget/v3/index.json": {}
+        "http://10.115.148.103:8081/repository/nuget-hosted/": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
           "projectReferences": {
-            "E:\\My_Source_Code\\ShopOrder\\JeansSolution\\Jeans.Core\\Jeans.Core.csproj": {
-              "projectPath": "E:\\My_Source_Code\\ShopOrder\\JeansSolution\\Jeans.Core\\Jeans.Core.csproj"
+            "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Core\\Jeans.Core.csproj": {
+              "projectPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Core\\Jeans.Core.csproj"
             }
           }
         }
@@ -5597,6 +5598,7 @@
     },
     "frameworks": {
       "netcoreapp2.2": {
+        "targetAlias": "netcoreapp2.2",
         "dependencies": {
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
@@ -5610,10 +5612,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

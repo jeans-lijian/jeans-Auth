@@ -1,0 +1,9 @@
+E:\My_Source_Code\jeans-Auth\JeansSolution\Jeans.Core\bin\Debug\netcoreapp2.2\Jeans.Core.deps.json
+E:\My_Source_Code\jeans-Auth\JeansSolution\Jeans.Core\bin\Debug\netcoreapp2.2\Jeans.Core.dll
+E:\My_Source_Code\jeans-Auth\JeansSolution\Jeans.Core\bin\Debug\netcoreapp2.2\Jeans.Core.pdb
+E:\My_Source_Code\jeans-Auth\JeansSolution\Jeans.Core\obj\Debug\netcoreapp2.2\Jeans.Core.csprojAssemblyReference.cache
+E:\My_Source_Code\jeans-Auth\JeansSolution\Jeans.Core\obj\Debug\netcoreapp2.2\Jeans.Core.AssemblyInfoInputs.cache
+E:\My_Source_Code\jeans-Auth\JeansSolution\Jeans.Core\obj\Debug\netcoreapp2.2\Jeans.Core.AssemblyInfo.cs
+E:\My_Source_Code\jeans-Auth\JeansSolution\Jeans.Core\obj\Debug\netcoreapp2.2\Jeans.Core.csproj.CoreCompileInputs.cache
+E:\My_Source_Code\jeans-Auth\JeansSolution\Jeans.Core\obj\Debug\netcoreapp2.2\Jeans.Core.dll
+E:\My_Source_Code\jeans-Auth\JeansSolution\Jeans.Core\obj\Debug\netcoreapp2.2\Jeans.Core.pdb

@@ -28,7 +28,8 @@ namespace Jeans.Jwt.Server.Controllers
                 {
                     new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
                     new Claim(JwtRegisteredClaimNames.Name,input.UserName),
-                    new Claim("Role",string.Join(",",new []{ "Admin","Study"}))
+                    new Claim(ClaimTypes.Role,"Admin"),
+                    new Claim(ClaimTypes.Role,"Study")
                 };
 
                 var token = new JwtSecurityToken(issuer: JwtConst.Issuer,

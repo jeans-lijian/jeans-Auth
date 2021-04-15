@@ -10,7 +10,7 @@ namespace Jeans.Http
 {
     public class StandardHttpClient : IHttpClient
     {
-        private HttpClient _client;
+        private readonly HttpClient _client;
         public StandardHttpClient()
         {
             _client = new HttpClient();
@@ -49,8 +49,10 @@ namespace Jeans.Http
                 throw new ArgumentException("Value must be either post or put.", nameof(method));
             }
 
-            var requestMessage = new HttpRequestMessage(method, uri);
-            requestMessage.Content = new StringContent(JsonConvert.SerializeObject(item), Encoding.UTF8, "application/json");
+            var requestMessage = new HttpRequestMessage(method, uri)
+            {
+                Content = new StringContent(JsonConvert.SerializeObject(item), Encoding.UTF8, "application/json")
+            };
 
             var response = await _client.SendAsync(requestMessage);
 

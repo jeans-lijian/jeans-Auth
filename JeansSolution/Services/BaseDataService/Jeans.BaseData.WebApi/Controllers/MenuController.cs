@@ -123,7 +123,7 @@ namespace Jeans.BaseData.WebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize(Roles = "Admin,Study")]
+        [Authorize(Policy = "test")]
         public IActionResult Get(int id)
         {
             return Ok("success");

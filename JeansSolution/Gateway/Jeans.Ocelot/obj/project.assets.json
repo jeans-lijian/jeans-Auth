@@ -7490,12 +7490,11 @@
       ]
     },
     "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "c3YNH1GQJbfIPJeCnr4avseugSqPrxwIqzthYyZDN6EuOyNOzq+y2KSUfRcXauya1sF4foESTgwM5e1A8arAKw==",
+      "sha512": "LdIvj7Bi2jiaNTqY/ezZGVXHe1KI5fjLSI026O1TjVzsmdgTP/zTF+f3nwHCjwttyhsPBEiswv0PekimPWZwWg==",
       "type": "package",
       "path": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -7533,12 +7532,11 @@
       ]
     },
     "runtime.native.System.IO.Compression/4.3.0": {
-      "sha512": "INBPonS5QPEgn7naufQFXJEp3zX6L4bwHgJ/ZH78aBTpeNfQMtf7C6VrAFhlq2xxWBveIOWyFzQjJ8XzHMhdOQ==",
+      "sha512": "b+V9JC/Ii3sR659flBeaBJww111425tgjcDS1k+hqV4sGh9FALRDBvJnDtQ895gAzpPTUOFDHdqaZ2Et7BpZMg==",
       "type": "package",
       "path": "runtime.native.system.io.compression/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -12178,11 +12176,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\gateway\\Jeans.Ocelot\\Jeans.Ocelot.csproj",
+      "projectUniqueName": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Gateway\\Jeans.Ocelot\\Jeans.Ocelot.csproj",
       "projectName": "Jeans.Ocelot",
-      "projectPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\gateway\\Jeans.Ocelot\\Jeans.Ocelot.csproj",
+      "projectPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Gateway\\Jeans.Ocelot\\Jeans.Ocelot.csproj",
       "packagesPath": "C:\\Users\\lijian15\\.nuget\\packages\\",
-      "outputPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\gateway\\Jeans.Ocelot\\obj\\",
+      "outputPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Gateway\\Jeans.Ocelot\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

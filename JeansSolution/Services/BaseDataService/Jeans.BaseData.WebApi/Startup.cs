@@ -8,6 +8,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
+using Jeans.BaseData.WebApi.Handler;
 
 namespace Jeans.BaseData.WebApi
 {
@@ -38,11 +40,19 @@ namespace Jeans.BaseData.WebApi
                     };
                 });
 
+            services.AddAuthorization(options =>
+            {
+                //options.AddPolicy("test", p => p.RequireClaim("xoxo"));
+                options.AddPolicy("test", p => p.Requirements.Add(new TestRequirement()));
+            });
+
             services.AddControllers()
                     .AddJsonOptions(options =>
                     {
                         options.JsonSerializerOptions.PropertyNamingPolicy = null;
                     });
+
+            services.AddSingleton<IAuthorizationHandler, TestHandler>();
         }
 
         public void Configure(IApplicationBuilder app, IHostEnvironment env)

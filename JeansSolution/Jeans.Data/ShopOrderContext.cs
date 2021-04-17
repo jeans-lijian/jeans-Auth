@@ -1,11 +1,6 @@
-﻿using Jeans.Core.Domins;
-using Jeans.Data.Extensions;
-using JetBrains.Annotations;
+﻿using Jeans.Data.Extensions;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Jeans.Data
 {
@@ -22,7 +17,7 @@ namespace Jeans.Data
             base.OnModelCreating(modelBuilder);
         }
 
-        public virtual new DbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity
+        public virtual new DbSet<TEntity> Set<TEntity>() where TEntity : class
         {
             return base.Set<TEntity>();
         }

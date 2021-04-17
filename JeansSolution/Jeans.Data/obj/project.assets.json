@@ -1487,16 +1487,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
-      },
-      "Jeans.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "compile": {
-          "bin/placeholder/Jeans.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Jeans.Core.dll": {}
-        }
       }
     }
   },
@@ -5538,16 +5528,10 @@
         "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
-    },
-    "Jeans.Core/1.0.0": {
-      "type": "project",
-      "path": "../Jeans.Core/Jeans.Core.csproj",
-      "msbuildProject": "../Jeans.Core/Jeans.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "Jeans.Core >= 1.0.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "MySql.Data.EntityFrameworkCore >= 8.0.18"
     ]
@@ -5583,11 +5567,7 @@
       "frameworks": {
         "netcoreapp2.2": {
           "targetAlias": "netcoreapp2.2",
-          "projectReferences": {
-            "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Core\\Jeans.Core.csproj": {
-              "projectPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Jeans.Core\\Jeans.Core.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

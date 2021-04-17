@@ -1,10 +1,9 @@
-﻿using Jeans.Core.Domins;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace Jeans.Data
 {
-    public interface IRepository<T> where T : BaseEntity
+    public interface IRepository<T> where T : class
     {
         IQueryable<T> Table { get; }
         IQueryable<T> TableNoTracking { get; }

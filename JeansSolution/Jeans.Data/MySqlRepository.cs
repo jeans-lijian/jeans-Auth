@@ -1,13 +1,11 @@
-﻿using Jeans.Core.Domins;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Jeans.Data
 {
-    public class MySqlRepository<T> : IRepository<T> where T : BaseEntity
+    public class MySqlRepository<T> : IRepository<T> where T : class
     {
         private readonly IDbContext _context;
         private DbSet<T> _entities;

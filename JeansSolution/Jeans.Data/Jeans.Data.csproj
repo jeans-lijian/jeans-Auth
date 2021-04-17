@@ -8,8 +8,4 @@
     <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.18" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Jeans.Core\Jeans.Core.csproj" />
-  </ItemGroup>
-
 </Project>

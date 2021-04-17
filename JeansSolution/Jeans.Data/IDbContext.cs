@@ -1,12 +1,11 @@
-﻿using Jeans.Core.Domins;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace Jeans.Data
 {
     public interface IDbContext
     {
-        DbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity;
+        DbSet<TEntity> Set<TEntity>() where TEntity : class;
 
         int SaveChanges();
 

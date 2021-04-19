@@ -13,7 +13,7 @@ namespace Jeans.BaseData.WebApi.Controllers
     public class MenuController : ControllerBase
     {
         [HttpGet("getlist")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Policy = "Manager")]
         public IActionResult GetList()
         {
             var menus = new List<MenuViewModel>();
@@ -123,10 +123,11 @@ namespace Jeans.BaseData.WebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize(Policy = "test")]
+        [Authorize(Policy = "Read")]
+        //[Authorize(Roles = "Admin")]
         public IActionResult Get(int id)
         {
-            return Ok("success");
+            return Ok($"success id={id}");
         }
     }
 }

@@ -24,26 +24,35 @@ namespace Jeans.BaseData.WebApi
 
         public void ConfigureServices(IServiceCollection services)
         {
+            // Jwt
+            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //    .AddJwtBearer(options =>
+            //     {   
+            //         //options.TokenValidationParameters = new TokenValidationParameters
+            //         //{
+            //         //    ValidateIssuer = true,
+            //         //    ValidateAudience = true,
+            //         //    ValidateLifetime = true,
+            //         //    ValidateIssuerSigningKey = true,
+            //         //    ValidIssuer = JwtConst.Issuer,
+            //         //    ValidAudience = JwtConst.Audience,
+            //         //    ClockSkew = TimeSpan.Zero,
+            //         //    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtConst.SecretKey))
+            //         //};
+            //     });
+
+            // IdentityServer4
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
+                .AddIdentityServerAuthentication(options =>
                 {
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = true,
-                        ValidateAudience = true,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true,
-                        ValidIssuer = JwtConst.Issuer,
-                        ValidAudience = JwtConst.Audience,
-                        ClockSkew = TimeSpan.Zero,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtConst.SecretKey))
-                    };
+                    options.Authority = "http://localhost:8080";
+                    options.RequireHttpsMetadata = false;
+                    options.ApiName = "basedata";
                 });
 
             services.AddAuthorization(options =>
             {
-                //options.AddPolicy("test", p => p.RequireClaim("xoxo"));
-                options.AddPolicy("test", p => p.Requirements.Add(new TestRequirement()));
+                options.AddPolicy("Read", p => p.RequireClaim("scope", "basedata.read"));
             });
 
             services.AddControllers()

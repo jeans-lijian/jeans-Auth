@@ -26,7 +26,8 @@ namespace Jeans.Ids4.Server
                 .AddInMemoryClients(Config.GetClients())
                 .AddInMemoryIdentityResources(Config.GetIdentityResources())
                 .AddInMemoryApiResources(Config.GetApiResources())
-                .AddInMemoryApiScopes(Config.GetApiScopes());
+                .AddInMemoryApiScopes(Config.GetApiScopes())
+                .AddTestUsers(Config.GetUsers());
 
             services.AddControllersWithViews()
                     .AddJsonOptions(options =>
@@ -46,6 +47,7 @@ namespace Jeans.Ids4.Server
                 app.UseHsts();
             }
 
+            app.UseStaticFiles();
             app.UseRouting();
             app.UseIdentityServer();
 

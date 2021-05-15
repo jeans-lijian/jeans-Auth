@@ -1,6 +1,9 @@
-﻿using IdentityServer4;
+﻿using IdentityModel;
+using IdentityServer4;
 using IdentityServer4.Models;
+using IdentityServer4.Test;
 using System.Collections.Generic;
+using System.Security.Claims;
 
 namespace Jeans.Ids4.Server.Models
 {
@@ -67,6 +70,29 @@ namespace Jeans.Ids4.Server.Models
                     },
                     RedirectUris={ "http://localhost:60336/signin-oidc" },
                     PostLogoutRedirectUris={ "http://localhost:60336/signout-callback-oidc" }
+                }
+            };
+        }
+
+
+        public static List<TestUser> GetUsers()
+        {
+            return new List<TestUser>
+            {
+                new TestUser
+                {
+                    SubjectId = "20210515",
+                    Username = "jeans",
+                    Password = "123456",
+                    Claims =
+                    {
+                        new Claim(JwtClaimTypes.Name, "LiJian"),
+                        new Claim(JwtClaimTypes.GivenName, "Li"),
+                        new Claim(JwtClaimTypes.FamilyName, "Jian"),
+                        new Claim(JwtClaimTypes.Email, "lijiansoftware@163.com"),
+                        new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
+                        new Claim(JwtClaimTypes.WebSite, "http://github.com/jeans-lijian")
+                    }
                 }
             };
         }

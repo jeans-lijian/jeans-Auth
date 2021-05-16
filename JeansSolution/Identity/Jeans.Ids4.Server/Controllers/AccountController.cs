@@ -4,12 +4,12 @@ using IdentityServer4.Models;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
 using IdentityServer4.Test;
+using Jeans.Ids4.Server.Data;
 using Jeans.Ids4.Server.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -41,13 +41,18 @@ namespace Jeans.Ids4.Server.Controllers
         [HttpGet]
         public async Task<IActionResult> Login(string returnUrl)
         {
-            var vm = await BuildLoginViewModelAsync(returnUrl);
+            //var vm = await BuildLoginViewModelAsync(returnUrl);
 
-            if (vm.IsExternalLoginOnly)
+            //if (vm.IsExternalLoginOnly)
+            //{
+            //    // we only have one option for logging in and it's an external provider
+            //    return RedirectToAction("Challenge", "External", new { scheme = vm.ExternalLoginScheme, returnUrl });
+            //}
+
+            LoginViewModel vm = new LoginViewModel
             {
-                // we only have one option for logging in and it's an external provider
-                return RedirectToAction("Challenge", "External", new { scheme = vm.ExternalLoginScheme, returnUrl });
-            }
+                ReturnUrl = returnUrl
+            };
 
             return View(vm);
         }
@@ -86,11 +91,13 @@ namespace Jeans.Ids4.Server.Controllers
 
                     if (context != null)
                     {
-                        if (context.IsNativeClient())
-                        {
-                            return this.LoadingPage("Redirect", model.ReturnUrl);
-                        }
-                        return Redirect(model.ReturnUrl);
+                        //if (context.IsNativeClient())
+                        //{
+                        //    return this.LoadingPage("Redirect", model.ReturnUrl);
+                        //}
+                        //return Redirect(model.ReturnUrl);
+
+                        return Redirect(context.RedirectUri);
                     }
 
                     // request for a local page

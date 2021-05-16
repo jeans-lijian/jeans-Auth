@@ -5,7 +5,7 @@ using IdentityServer4.Test;
 using System.Collections.Generic;
 using System.Security.Claims;
 
-namespace Jeans.Ids4.Server.Models
+namespace Jeans.Ids4.Server.Data
 {
     /// <summary>
     /// IdentityServer

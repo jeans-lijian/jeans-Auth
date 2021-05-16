@@ -1,3 +1,4 @@
+using IdentityModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -35,8 +36,12 @@ namespace Jeans.Ids4.Web
                     options.ClientId = "mvc_client";
                     options.ClientSecret = "secret";
                     options.ResponseType = OpenIdConnectResponseType.Code;
-
                     options.SaveTokens = true;
+
+                    //options.Scope.Clear();
+                    //options.Scope.Add(OidcConstants.StandardScopes.OpenId);
+                    //options.Scope.Add(OidcConstants.StandardScopes.Profile);
+                    //options.Scope.Add(OidcConstants.StandardScopes.OfflineAccess);
                 });
 
             services.AddControllersWithViews();

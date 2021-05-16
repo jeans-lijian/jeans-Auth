@@ -1,4 +1,4 @@
-﻿using Jeans.Ids4.Server.Models;
+﻿using Jeans.Ids4.Server.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

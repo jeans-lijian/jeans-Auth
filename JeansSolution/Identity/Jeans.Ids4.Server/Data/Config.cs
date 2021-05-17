@@ -52,11 +52,11 @@ namespace Jeans.Ids4.Server.Data
             {
                 new Client
                 {
-                    ClientId="hangfire_client",
-                    AllowedGrantTypes=GrantTypes.ClientCredentials,
+                    ClientId="hangfire_client",                    
                     ClientSecrets={
                         new Secret("secret".Sha256())
                     },
+                    AllowedGrantTypes=GrantTypes.ClientCredentials,
                     AllowedScopes={ "basedata.read" }
                 },
                 new Client
@@ -68,8 +68,8 @@ namespace Jeans.Ids4.Server.Data
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile
                     },
-                    RedirectUris={ "http://localhost:60336/signin-oidc" },
-                    PostLogoutRedirectUris={ "http://localhost:60336/signout-callback-oidc" }
+                    RedirectUris={ "http://localhost:5000/signin-oidc" },
+                    PostLogoutRedirectUris={ "http://localhost:5000/signout-callback-oidc" }
                 }
             };
         }

@@ -7,6 +7,7 @@ using IdentityServer4.Test;
 using Jeans.Ids4.Server.Data;
 using Jeans.Ids4.Server.Models;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -41,18 +42,13 @@ namespace Jeans.Ids4.Server.Controllers
         [HttpGet]
         public async Task<IActionResult> Login(string returnUrl)
         {
-            //var vm = await BuildLoginViewModelAsync(returnUrl);
+            var vm = await BuildLoginViewModelAsync(returnUrl);
 
-            //if (vm.IsExternalLoginOnly)
-            //{
-            //    // we only have one option for logging in and it's an external provider
-            //    return RedirectToAction("Challenge", "External", new { scheme = vm.ExternalLoginScheme, returnUrl });
-            //}
-
-            LoginViewModel vm = new LoginViewModel
+            if (vm.IsExternalLoginOnly)
             {
-                ReturnUrl = returnUrl
-            };
+                // we only have one option for logging in and it's an external provider
+                return RedirectToAction("Challenge", "External", new { scheme = vm.ExternalLoginScheme, returnUrl });
+            }
 
             return View(vm);
         }
@@ -68,9 +64,7 @@ namespace Jeans.Ids4.Server.Controllers
                 if (_userStore.ValidateCredentials(model.UserName, model.Password))
                 {
                     TestUser user = _userStore.FindByUsername(model.UserName);
-
-                    var eventModel = new UserLoginSuccessEvent(user.Username, user.SubjectId, user.Username, clientId: context?.Client.ClientId);
-                    await _eventService.RaiseAsync(eventModel);
+                    await _eventService.RaiseAsync(new UserLoginSuccessEvent(user.Username, user.SubjectId, user.Username, clientId: context?.Client.ClientId));
 
                     AuthenticationProperties props = null;
                     if (model.RememberLogin)
@@ -95,7 +89,6 @@ namespace Jeans.Ids4.Server.Controllers
                         //{
                         //    return this.LoadingPage("Redirect", model.ReturnUrl);
                         //}
-
                         return Redirect(model.ReturnUrl);
                     }
 

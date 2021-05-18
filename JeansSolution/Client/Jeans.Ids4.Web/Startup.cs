@@ -1,4 +1,3 @@
-using IdentityModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -20,12 +19,14 @@ namespace Jeans.Ids4.Web
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.ConfigureNonBreakingSameSiteCookies();
+
             JwtSecurityTokenHandler.DefaultMapInboundClaims = false;
 
             services.AddAuthentication(options =>
             {
                 options.DefaultScheme = "Cookies";
-                options.DefaultChallengeScheme ="oidc";
+                options.DefaultChallengeScheme = "oidc";
             })
                 .AddCookie("Cookies")
                 .AddOpenIdConnect("oidc", options =>
@@ -43,8 +44,8 @@ namespace Jeans.Ids4.Web
                     options.Scope.Add(OidcConstants.StandardScopes.Profile);
                     //options.Scope.Add(OidcConstants.StandardScopes.OfflineAccess);
                 });
-
-            services.AddControllersWithViews();
+                        
+            services.AddControllersWithViews();            
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -57,10 +58,10 @@ namespace Jeans.Ids4.Web
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseCookiePolicy();
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthentication();
             app.UseAuthorization();
 

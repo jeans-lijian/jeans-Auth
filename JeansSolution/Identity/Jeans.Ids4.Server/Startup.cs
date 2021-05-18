@@ -18,22 +18,17 @@ namespace Jeans.Ids4.Server
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddIdentityServer(options =>
-            {
-                //options.UserInteraction.LoginUrl
-            })
+            services.ConfigureNonBreakingSameSiteCookies();
+
+            services.AddControllersWithViews();
+
+            services.AddIdentityServer()
                 .AddDeveloperSigningCredential()
                 .AddInMemoryClients(Config.GetClients())
                 .AddInMemoryIdentityResources(Config.GetIdentityResources())
                 .AddInMemoryApiResources(Config.GetApiResources())
                 .AddInMemoryApiScopes(Config.GetApiScopes())
                 .AddTestUsers(Config.GetUsers());
-
-            services.AddControllersWithViews()
-                    .AddJsonOptions(options =>
-                    {
-                        options.JsonSerializerOptions.PropertyNamingPolicy = null;
-                    });
         }
 
         public void Configure(IApplicationBuilder app, IHostEnvironment env)
@@ -47,9 +42,11 @@ namespace Jeans.Ids4.Server
                 app.UseHsts();
             }
 
+            app.UseCookiePolicy();
             app.UseStaticFiles();
             app.UseRouting();
             app.UseIdentityServer();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

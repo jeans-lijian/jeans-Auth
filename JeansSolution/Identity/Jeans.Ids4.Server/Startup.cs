@@ -50,7 +50,8 @@ namespace Jeans.Ids4.Server
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapDefaultControllerRoute()
+                    .RequireAuthorization();
             });
         }
     }

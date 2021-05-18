@@ -40,6 +40,7 @@ namespace Jeans.Ids4.Server.Controllers
 
 
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(string returnUrl)
         {
             var vm = await BuildLoginViewModelAsync(returnUrl);
@@ -54,6 +55,7 @@ namespace Jeans.Ids4.Server.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginInputViewModel model, string button)
         {

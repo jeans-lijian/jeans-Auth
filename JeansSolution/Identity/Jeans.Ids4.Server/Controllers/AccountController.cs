@@ -95,9 +95,8 @@ namespace Jeans.Ids4.Server.Controllers
                         //{
                         //    return this.LoadingPage("Redirect", model.ReturnUrl);
                         //}
-                        //return Redirect(model.ReturnUrl);
 
-                        return Redirect(context.RedirectUri);
+                        return Redirect(model.ReturnUrl);
                     }
 
                     // request for a local page

@@ -69,7 +69,8 @@ namespace Jeans.Ids4.Server.Data
                         IdentityServerConstants.StandardScopes.Profile
                     },
                     RedirectUris={ "http://localhost:60336/signin-oidc" },
-                    PostLogoutRedirectUris={ "http://localhost:60336/signout-callback-oidc" }
+                    PostLogoutRedirectUris={ "http://localhost:60336/signout-callback-oidc" },
+                    AllowOfflineAccess = true
                 }
             };
         }

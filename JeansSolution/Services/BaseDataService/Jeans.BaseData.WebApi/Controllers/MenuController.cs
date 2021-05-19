@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Jeans.BaseData.WebApi.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [ApiController]
     [ControllerName("menu")]
     [Route("api/basedata/[controller]")]
@@ -121,17 +121,11 @@ namespace Jeans.BaseData.WebApi.Controllers
             return Ok(menus);
         }
 
-        [HttpGet("{id}")]
-        public IActionResult Get(int id)
-        {
-            return Ok($"success id={id}");
-        }
-
-        [AllowAnonymous]
         [HttpGet("getname")]
+        [AllowAnonymous]
         public IActionResult GetName(string name)
         {
-            return Ok($"ocelot {name}");
+            return Ok($"ocelot = { name }");
         }
     }
 }

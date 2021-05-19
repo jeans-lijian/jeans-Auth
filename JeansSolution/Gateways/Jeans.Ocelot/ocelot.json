@@ -1,6 +1,7 @@
 {
-  "Routes": [
+  "ReRoutes": [
     {
+      "RouteIsCaseSensitive": false,
       "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -10,11 +11,10 @@
         }
       ],
       "UpstreamPathTemplate": "/{url}",
-      "UpstreamHttpMethod": [
-        "Get"
-      ]
+      "UpstreamHttpMethod": [ "Get", "POST", "PUT", "DELETE" ]
     }
   ],
   "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:10000"
   }
 }

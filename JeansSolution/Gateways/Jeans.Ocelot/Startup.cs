@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Ocelot.DependencyInjection;
@@ -11,7 +12,7 @@ namespace Jeans.Ocelot
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddOcelot();
+            services.AddOcelot(new ConfigurationBuilder().AddJsonFile("ocelot.json", true, true).Build());
         }
 
         public void Configure(IApplicationBuilder app, IHostEnvironment env)

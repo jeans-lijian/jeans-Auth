@@ -6,14 +6,13 @@ using System.Collections.Generic;
 
 namespace Jeans.BaseData.WebApi.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiController]
     [ControllerName("menu")]
     [Route("api/basedata/[controller]")]
     public class MenuController : ControllerBase
     {
         [HttpGet("getlist")]
-        [Authorize(Policy = "Manager")]
         public IActionResult GetList()
         {
             var menus = new List<MenuViewModel>();
@@ -123,11 +122,16 @@ namespace Jeans.BaseData.WebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize(Policy = "Read")]
-        //[Authorize(Roles = "Admin")]
         public IActionResult Get(int id)
         {
             return Ok($"success id={id}");
+        }
+
+        [AllowAnonymous]
+        [HttpGet("getname")]
+        public IActionResult GetName(string name)
+        {
+            return Ok($"ocelot {name}");
         }
     }
 }

@@ -9,21 +9,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="OcelotConfig\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Update="OcelotConfig\ocelot.global.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="OcelotConfig\ocelot.order.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="OcelotConfig\ocelot.user.json">
+    <Content Update="ocelot.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
-  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
+  <ProjectExtensions><VisualStudio><UserProperties ocelot_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

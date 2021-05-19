@@ -88,10 +88,6 @@ namespace Jeans.Ids4.Server.Controllers
 
                     if (context != null)
                     {
-                        //if (context.IsNativeClient())
-                        //{
-                        //    return this.LoadingPage("Redirect", model.ReturnUrl);
-                        //}
                         return Redirect(model.ReturnUrl);
                     }
 
@@ -106,7 +102,6 @@ namespace Jeans.Ids4.Server.Controllers
                     }
                     else
                     {
-                        // user might have clicked on a malicious link - should be logged
                         throw new Exception("invalid return URL");
                     }
                 }
@@ -125,7 +120,7 @@ namespace Jeans.Ids4.Server.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Logout()
+        public async Task<IActionResult> LoginOut()
         {
             if (User?.Identity.IsAuthenticated == true)
             {

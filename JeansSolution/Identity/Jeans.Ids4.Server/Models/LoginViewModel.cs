@@ -32,9 +32,4 @@ namespace Jeans.Ids4.Server.Models
         public string DisplayName { get; set; }
         public string AuthenticationScheme { get; set; }
     }
-
-    public class RedirectViewModel
-    {
-        public string RedirectUrl { get; set; }
-    }
 }

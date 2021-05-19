@@ -1,10 +1,8 @@
-using System;
 using IdentityServer4.Models;
-using Jeans.Ids4.Server.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace Jeans.Ids4.Server
 {
@@ -18,15 +16,7 @@ namespace Jeans.Ids4.Server
         {
             return !context.RedirectUri.StartsWith("https", StringComparison.Ordinal)
                && !context.RedirectUri.StartsWith("http", StringComparison.Ordinal);
-        }
-
-        public static IActionResult LoadingPage(this Controller controller, string viewName, string redirectUri)
-        {
-            controller.HttpContext.Response.StatusCode = 200;
-            controller.HttpContext.Response.Headers["Location"] = "";
-            
-            return controller.View(viewName, new RedirectViewModel { RedirectUrl = redirectUri });
-        }        
+        }       
     }
 
     public static class SameSiteCookiesServiceCollectionExtensions

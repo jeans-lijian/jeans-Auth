@@ -52,7 +52,7 @@ namespace Jeans.Ids4.Server.Data
             {
                 new Client
                 {
-                    ClientId="hangfire_client",                    
+                    ClientId="hangfire_client",
                     ClientSecrets={
                         new Secret("secret".Sha256())
                     },
@@ -69,7 +69,8 @@ namespace Jeans.Ids4.Server.Data
                         IdentityServerConstants.StandardScopes.Profile
                     },
                     RedirectUris={ "http://localhost:5000/signin-oidc" },
-                    PostLogoutRedirectUris={ "http://localhost:5000/signout-callback-oidc" }
+                    PostLogoutRedirectUris={ "http://localhost:5000/signout-callback-oidc" },
+                    RequireConsent=true
                 }
             };
         }

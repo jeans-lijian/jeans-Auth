@@ -23,16 +23,13 @@
 
         <div class="card">
             <div class="card-body login-card-body">
+                @if (ViewContext.ModelState.IsValid == false)
+                {
+                    <div asp-validation-summary="All"></div>
+                }
+
                 <form asp-controller="Account" asp-action="Login" method="post">
                     <input type="hidden" asp-for="ReturnUrl" />
-
-                    @if (ViewContext.ModelState.IsValid == false)
-                    {
-                        <div class="alert alert-danger">
-                            <strong>Error</strong>
-                            <div asp-validation-summary="All" class="danger"></div>
-                        </div>
-                    }
 
                     <div class="input-group mb-3">
                         <input class="form-control" placeholder="用户名" asp-for="UserName">
@@ -67,62 +64,24 @@
                     </div>
                 </form>
 
-                <div class="social-auth-links text-center mb-3">
-                    <p>- OR -</p>
-                    <a href="#" class="btn btn-block btn-primary">
-                        <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-                    </a>
-                    <a href="#" class="btn btn-block btn-danger">
-                        <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-                    </a>
-                </div>
-
-                <p class="mb-1">
-                    <a href="forgot-password.html">I forgot my password</a>
-                </p>
-                <p class="mb-0">
-                    <a href="register.html" class="text-center">Register a new membership</a>
-                </p>
-            </div>
-
-            @if (Model.VisibleExternalProviders.Any())
-            {
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2>External Account</h2>
-                        </div>
-                        <div class="card-body">
-                            <ul class="list-inline">
-                                @foreach (var provider in Model.VisibleExternalProviders)
-                                {
-                                    <li class="list-inline-item">
-                                        <a class="btn btn-secondary"
-                                           asp-controller="External"
-                                           asp-action="Challenge"
-                                           asp-route-scheme="@provider.AuthenticationScheme"
-                                           asp-route-returnUrl="@Model.ReturnUrl">
-                                            @provider.DisplayName
-                                        </a>
-                                    </li>
-                                }
-                            </ul>
-                        </div>
+                @if (Model.VisibleExternalProviders.Any())
+                {
+                    <div class="social-auth-links text-center mb-3">
+                        <p>- OR -</p>
+                        @foreach (var provider in Model.VisibleExternalProviders)
+                        {
+                            <a asp-controller="External" asp-action="Challenge"
+                               asp-route-scheme="@provider.AuthenticationScheme"
+                               asp-route-returnUrl="@Model.ReturnUrl" class="btn btn-block btn-primary">
+                                <i class="fab fa-facebook mr-2"></i> @provider.DisplayName
+                            </a>
+                        }
                     </div>
-                </div>
-            }
-
-            @if (!Model.EnableLocalLogin && !Model.VisibleExternalProviders.Any())
-            {
-                <div class="alert alert-warning">
-                    <strong>Invalid login request</strong>
-                    There are no login schemes configured for this request.
-                </div>
-            }
+                }
+            </div>
 
         </div>
     </div>
-
 
     <script src="~/js/adminlte.js"></script>
 </body>

@@ -42,26 +42,25 @@ namespace Jeans.BaseData.WebApi
             //     });
 
             // IdentityServer4
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddIdentityServerAuthentication(options =>
-                {
-                    options.Authority = "http://localhost:8080";
-                    options.RequireHttpsMetadata = false;
-                    options.ApiName = "basedata";
-                });
+            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //    .AddIdentityServerAuthentication(options =>
+            //    {
+            //        options.Authority = "http://localhost:8080";
+            //        options.RequireHttpsMetadata = false;
+            //        options.ApiName = "basedata";
+            //    });
 
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("Read", p => p.RequireClaim("scope", "basedata.read"));
-            });
+            //services.AddAuthorization(options =>
+            //{
+            //    //options.AddPolicy("Read", p => p.RequireClaim("scope", "basedata.read"));
+            //});
 
+            //services.AddAuthentication("Cookies");
             services.AddControllers()
                     .AddJsonOptions(options =>
                     {
                         options.JsonSerializerOptions.PropertyNamingPolicy = null;
                     });
-
-            services.AddSingleton<IAuthorizationHandler, TestHandler>();
         }
 
         public void Configure(IApplicationBuilder app, IHostEnvironment env)
@@ -77,8 +76,8 @@ namespace Jeans.BaseData.WebApi
 
             app.UseRouting();
 
-            app.UseAuthentication();
-            app.UseAuthorization();
+            //app.UseAuthentication();
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

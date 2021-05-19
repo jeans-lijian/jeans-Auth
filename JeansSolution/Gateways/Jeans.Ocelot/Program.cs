@@ -16,13 +16,14 @@ namespace Jeans.Ocelot
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(config =>
                 {
-                    config.UseUrls("http://*:10000");
-                    config.UseStartup<Startup>();
                     config.ConfigureAppConfiguration((hostingContext, builder) =>
                     {
                         builder.SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
-                               .AddOcelot("OcelotConfig", hostingContext.HostingEnvironment);
+                               .AddJsonFile("ocelot.json", false, true);
                     });
+
+                    config.UseUrls("http://*:10000");
+                    config.UseStartup<Startup>();
                 });
     }
 }

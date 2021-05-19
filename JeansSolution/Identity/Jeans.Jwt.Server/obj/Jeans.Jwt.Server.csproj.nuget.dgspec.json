@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Jwt.Server\\Jeans.Jwt.Server.csproj": {}
+    "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Jwt.Server\\Jeans.Jwt.Server.csproj": {}
   },
   "projects": {
-    "D:\\GitHub_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Jwt.Server\\Jeans.Jwt.Server.csproj": {
+    "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Jwt.Server\\Jeans.Jwt.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Jwt.Server\\Jeans.Jwt.Server.csproj",
+        "projectUniqueName": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Jwt.Server\\Jeans.Jwt.Server.csproj",
         "projectName": "Jeans.Jwt.Server",
-        "projectPath": "D:\\GitHub_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Jwt.Server\\Jeans.Jwt.Server.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Jwt.Server\\obj\\",
+        "projectPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Jwt.Server\\Jeans.Jwt.Server.csproj",
+        "packagesPath": "C:\\Users\\lijian15\\.nuget\\packages\\",
+        "outputPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Jwt.Server\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lijian15\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://10.115.148.103:8081/repository/nuget-hosted/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -67,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

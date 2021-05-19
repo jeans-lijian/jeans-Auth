@@ -57,7 +57,8 @@ namespace Jeans.Ids4.Server.Data
                         new Secret("secret".Sha256())
                     },
                     AllowedGrantTypes=GrantTypes.ClientCredentials,
-                    AllowedScopes={ "basedata.read" }
+                    AllowedScopes={ "basedata.read" },
+                    AccessTokenLifetime=30
                 },
                 new Client
                 {

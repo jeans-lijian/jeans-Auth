@@ -17,3 +17,15 @@ E:\My_Source_Code\jeans-Auth\JeansSolution\Identity\Jeans.Order.CoreApi\obj\Debu
 E:\My_Source_Code\jeans-Auth\JeansSolution\Identity\Jeans.Order.CoreApi\obj\Debug\netcoreapp3.1\Jeans.Ids4.Server.dll
 E:\My_Source_Code\jeans-Auth\JeansSolution\Identity\Jeans.Order.CoreApi\obj\Debug\netcoreapp3.1\Jeans.Ids4.Server.pdb
 E:\My_Source_Code\jeans-Auth\JeansSolution\Identity\Jeans.Order.CoreApi\obj\Debug\netcoreapp3.1\Jeans.Ids4.Server.genruntimeconfig.cache
+D:\GitHub_Code\jeans-Auth\JeansSolution\Identity\Jeans.Ids4.Server\bin\Debug\netcoreapp3.1\Jeans.Ids4.Server.exe
+D:\GitHub_Code\jeans-Auth\JeansSolution\Identity\Jeans.Ids4.Server\bin\Debug\netcoreapp3.1\Jeans.Ids4.Server.dll
+D:\GitHub_Code\jeans-Auth\JeansSolution\Identity\Jeans.Ids4.Server\bin\Debug\netcoreapp3.1\Jeans.Ids4.Server.Views.dll
+D:\GitHub_Code\jeans-Auth\JeansSolution\Identity\Jeans.Ids4.Server\bin\Debug\netcoreapp3.1\IdentityModel.dll
+D:\GitHub_Code\jeans-Auth\JeansSolution\Identity\Jeans.Ids4.Server\bin\Debug\netcoreapp3.1\IdentityServer4.dll
+D:\GitHub_Code\jeans-Auth\JeansSolution\Identity\Jeans.Ids4.Server\bin\Debug\netcoreapp3.1\IdentityServer4.Storage.dll
+D:\GitHub_Code\jeans-Auth\JeansSolution\Identity\Jeans.Ids4.Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\GitHub_Code\jeans-Auth\JeansSolution\Identity\Jeans.Ids4.Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\GitHub_Code\jeans-Auth\JeansSolution\Identity\Jeans.Ids4.Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\GitHub_Code\jeans-Auth\JeansSolution\Identity\Jeans.Ids4.Server\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\GitHub_Code\jeans-Auth\JeansSolution\Identity\Jeans.Ids4.Server\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\GitHub_Code\jeans-Auth\JeansSolution\Identity\Jeans.Ids4.Server\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll

@@ -47,6 +47,7 @@ namespace Jeans.BaseData.WebApi
                 {
                     options.Authority = "http://localhost:8080";
                     options.RequireHttpsMetadata = false;
+                    options.JwtValidationClockSkew = TimeSpan.FromSeconds(0);
                     options.ApiName = "basedata";
                 });
 
@@ -75,7 +76,7 @@ namespace Jeans.BaseData.WebApi
 
             app.UseRouting();
 
-            //app.UseAuthentication();
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

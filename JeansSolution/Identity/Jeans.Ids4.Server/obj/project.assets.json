@@ -2941,11 +2941,12 @@
       ]
     },
     "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "LdIvj7Bi2jiaNTqY/ezZGVXHe1KI5fjLSI026O1TjVzsmdgTP/zTF+f3nwHCjwttyhsPBEiswv0PekimPWZwWg==",
+      "sha512": "c3YNH1GQJbfIPJeCnr4avseugSqPrxwIqzthYyZDN6EuOyNOzq+y2KSUfRcXauya1sF4foESTgwM5e1A8arAKw==",
       "type": "package",
       "path": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -2967,11 +2968,12 @@
       ]
     },
     "runtime.native.System.IO.Compression/4.3.0": {
-      "sha512": "b+V9JC/Ii3sR659flBeaBJww111425tgjcDS1k+hqV4sGh9FALRDBvJnDtQ895gAzpPTUOFDHdqaZ2Et7BpZMg==",
+      "sha512": "INBPonS5QPEgn7naufQFXJEp3zX6L4bwHgJ/ZH78aBTpeNfQMtf7C6VrAFhlq2xxWBveIOWyFzQjJ8XzHMhdOQ==",
       "type": "package",
       "path": "runtime.native.system.io.compression/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -6355,23 +6357,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lijian15\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Ids4.Server\\Jeans.Ids4.Server.csproj",
+      "projectUniqueName": "D:\\GitHub_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Ids4.Server\\Jeans.Ids4.Server.csproj",
       "projectName": "Jeans.Ids4.Server",
-      "projectPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Ids4.Server\\Jeans.Ids4.Server.csproj",
-      "packagesPath": "C:\\Users\\lijian15\\.nuget\\packages\\",
-      "outputPath": "E:\\My_Source_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Ids4.Server\\obj\\",
+      "projectPath": "D:\\GitHub_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Ids4.Server\\Jeans.Ids4.Server.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub_Code\\jeans-Auth\\JeansSolution\\Identity\\Jeans.Ids4.Server\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\lijian15\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6379,7 +6377,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://10.115.148.103:8081/repository/nuget-hosted/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6429,7 +6426,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

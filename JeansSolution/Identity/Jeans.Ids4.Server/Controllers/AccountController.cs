@@ -1,5 +1,6 @@
 ﻿using IdentityServer4;
 using IdentityServer4.Events;
+using IdentityServer4.Extensions;
 using IdentityServer4.Models;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
@@ -120,6 +121,20 @@ namespace Jeans.Ids4.Server.Controllers
                 RememberLogin = model.RememberLogin,
                 ReturnUrl = model.ReturnUrl
             });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            if (User?.Identity.IsAuthenticated == true)
+            {
+                await HttpContext.SignOutAsync();
+
+                await _eventService.RaiseAsync(new UserLogoutSuccessEvent(User.GetSubjectId(), User.GetDisplayName()));
+            }
+
+            return RedirectToAction(nameof(Login));
         }
 
         private async Task<LoginViewModel> BuildLoginViewModelAsync(string returnUrl)

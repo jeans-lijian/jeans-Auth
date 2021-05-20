@@ -11,7 +11,11 @@
         }
       ],
       "UpstreamPathTemplate": "/{url}",
-      "UpstreamHttpMethod": [ "Get", "POST", "PUT", "DELETE" ]
+      "UpstreamHttpMethod": [ "Get", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Ids4Key",
+        "AllowedScopes": []
+      }
     }
   ],
   "GlobalConfiguration": {

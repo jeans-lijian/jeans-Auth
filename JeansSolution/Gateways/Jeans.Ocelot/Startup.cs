@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +13,14 @@ namespace Jeans.Ocelot
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                    .AddIdentityServerAuthentication("Ids4Key", options =>
+                    {
+                        options.Authority = "http://localhost:8080";
+                        options.RequireHttpsMetadata = false;
+                        options.ApiName = "basedata";
+                    });
+
             services.AddOcelot(new ConfigurationBuilder().AddJsonFile("ocelot.json", true, true).Build());
         }
 

@@ -16,6 +16,19 @@
         "AuthenticationProviderKey": "Ids4Key",
         "AllowedScopes": []
       }
+    },
+    {
+      "RouteIsCaseSensitive": false,
+      "DownstreamPathTemplate": "/api/basedata/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9090
+        }
+      ],
+      "UpstreamPathTemplate": "/basedata/{url}",
+      "UpstreamHttpMethod": [ "Get", "POST", "PUT", "DELETE" ]
     }
   ],
   "GlobalConfiguration": {

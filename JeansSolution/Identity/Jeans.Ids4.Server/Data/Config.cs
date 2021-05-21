@@ -58,7 +58,7 @@ namespace Jeans.Ids4.Server.Data
                     },
                     AllowedGrantTypes=GrantTypes.ClientCredentials,
                     AllowedScopes={ "basedata.read" },
-                    AccessTokenLifetime=30
+                    AccessTokenLifetime=120
                 },
                 new Client
                 {

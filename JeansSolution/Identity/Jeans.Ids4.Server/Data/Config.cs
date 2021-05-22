@@ -17,7 +17,10 @@ namespace Jeans.Ids4.Server.Data
             return new List<IdentityResource>
             {
                 new IdentityResources.OpenId(),
-                new IdentityResources.Profile()
+                new IdentityResources.Profile(),
+                new IdentityResources.Email(),
+                new IdentityResources.Address(),
+                new IdentityResources.Phone()
             };
         }
 
@@ -72,6 +75,14 @@ namespace Jeans.Ids4.Server.Data
                     RedirectUris={ "http://localhost:5000/signin-oidc" },
                     PostLogoutRedirectUris={ "http://localhost:5000/signout-callback-oidc" },
                     RequireConsent=true
+                },
+                new Client
+                {
+                    ClientId="basedata_api",
+                    ClientSecrets={ new Secret("secret".Sha256())},
+                    AllowedGrantTypes=GrantTypes.ResourceOwnerPassword,
+                    AllowedScopes={ "basedata.read","basedata.admin","manager" },
+                    AccessTokenLifetime=120
                 }
             };
         }
